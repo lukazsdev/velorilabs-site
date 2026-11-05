@@ -2,33 +2,167 @@
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>quant blitz on the App Store</title>
-    <meta name="description" content="quant blitz: interview prep for trading and quant dev roles. Free on the App Store." />
-    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>quant blitz: quant interview prep</title>
+    <meta
+      name="description"
+      content="Quant interview prep in a few minutes a day: probability, mental maths, brainteasers, market making, options and C++, every answer explained. Free on the App Store."
+    />
+    <link rel="canonical" href="https://velorilabs.co.uk/quantblitz/" />
     <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="../favicon.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
-    <meta name="theme-color" content="#0b0b0e" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
-    <!-- The ads link here: Meta only accepts App Store links in app-install campaigns, which need its SDK in the app. -->
-    <meta http-equiv="refresh" content="1; url=https://apps.apple.com/app/id6820223409" />
+    <meta name="theme-color" content="#0b0f14" />
+    <meta name="apple-itunes-app" content="app-id=6820223409" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="quant blitz: quant interview prep" />
+    <meta property="og:url" content="https://velorilabs.co.uk/quantblitz/" />
+    <meta property="og:image" content="https://velorilabs.co.uk/img/quant-blitz-path.jpg" />
     <link rel="preload" href="../fonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="../styles.css" />
-    <script>
-      location.replace('https://apps.apple.com/app/id6820223409');
-    </script>
+    <style>
+      @font-face {
+        font-family: 'Space Grotesk';
+        src: url('../fonts/space-grotesk-700.woff2') format('woff2');
+        font-weight: 700;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('../fonts/inter-400.woff2') format('woff2');
+        font-weight: 400;
+        font-display: swap;
+      }
+      /* The app's dark theme (src/theme/colors.ts in quant blitz). */
+      :root {
+        color-scheme: dark;
+        --bg: #0b0f14;
+        --surface: #141a23;
+        --line: #232c38;
+        --text: #e8edf2;
+        --muted: #8a96a3;
+        --accent: #00d68f;
+        --on-accent: #0b0f14;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 400 16px/1.55 'Inter', system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      main {
+        box-sizing: border-box;
+        max-width: 440px;
+        margin: 0 auto;
+        padding: max(40px, env(safe-area-inset-top)) 20px 24px;
+        text-align: center;
+      }
+      .icon {
+        display: block;
+        margin: 0 auto 16px;
+        border-radius: 18px;
+      }
+      h1 {
+        margin: 0;
+        font: 700 34px/1.1 'Space Grotesk', 'Inter', sans-serif;
+        letter-spacing: -0.03em;
+      }
+      .lede {
+        margin: 10px 0 20px;
+        font-size: 18px;
+        text-wrap: balance;
+      }
+      .lede strong {
+        color: var(--accent);
+        font-weight: 400;
+      }
+      ul {
+        margin: 0 0 24px;
+        padding: 16px 18px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--surface);
+        list-style: none;
+        text-align: left;
+      }
+      li {
+        position: relative;
+        padding-left: 22px;
+        color: var(--text);
+      }
+      li + li {
+        margin-top: 8px;
+      }
+      li::before {
+        content: '';
+        position: absolute;
+        left: 2px;
+        top: 0.62em;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+      .download {
+        display: block;
+        padding: 16px 20px;
+        border-radius: 14px;
+        background: var(--accent);
+        color: var(--on-accent);
+        font: 700 18px/1.2 'Space Grotesk', 'Inter', sans-serif;
+        text-decoration: none;
+      }
+      .download:focus-visible {
+        outline: 2px solid var(--text);
+        outline-offset: 3px;
+      }
+      .note {
+        margin: 10px 0 28px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .shot {
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 24px;
+      }
+      footer {
+        padding: 24px 20px max(24px, env(safe-area-inset-bottom));
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+      footer p {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <main>
-      <a class="app" href="https://apps.apple.com/app/id6820223409">
-        <img src="../img/quant-blitz.png" alt="" width="64" height="64" />
-        <span class="app-text">
-          <span class="app-name">quant blitz</span>
-          <span class="app-tagline">Interview prep for trading and quant dev roles</span>
-          <span class="app-store">Free on the App Store ↗</span>
-        </span>
-      </a>
+      <img class="icon" src="../img/quant-blitz.png" alt="" width="72" height="72" />
+      <h1>quant blitz</h1>
+      <p class="lede">Quant interview prep in <strong>a few minutes a day</strong>.</p>
+      <ul>
+        <li>1,424 questions on probability, brainteasers, market making, options and C++</li>
+        <li>Mental maths speed drills, against the clock</li>
+        <li>Every answer explained, with a review queue for what you miss</li>
+      </ul>
+      <a class="download" href="https://apps.apple.com/app/id6820223409">Download on the App Store</a>
+      <p class="note">Free on iPhone</p>
+      <img
+        class="shot"
+        src="../img/quant-blitz-path.jpg"
+        alt="The quant blitz app showing the Trading track's Market Making section"
+        width="640"
+        height="1390"
+        loading="lazy"
+      />
     </main>
     <footer>
       <p>© 2026 Velori Labs Ltd · Registered in England and Wales · Company number 17529890</p>
