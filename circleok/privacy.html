@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CircleOK privacy policy · Velori Labs</title>
+    <meta
+      name="description"
+      content="How CircleOK, the family check-in app by Velori Labs Ltd, handles personal data."
+    />
+    <link rel="canonical" href="https://velorilabs.co.uk/circleok/privacy" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      main {
+        max-width: 42rem;
+      }
+      h2 {
+        margin-top: 2rem;
+        font-size: 1.15rem;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 0.95rem;
+      }
+      td,
+      th {
+        border-top: 1px solid var(--line);
+        padding: 0.5rem 0.25rem;
+        text-align: left;
+        vertical-align: top;
+      }
+      .nav a {
+        margin-right: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="nav">
+        <a href="../">Velori Labs</a><a href="support">Support</a><a href="terms">Terms</a
+        ><a href="delete-account">Delete account</a>
+      </p>
+      <h1>CircleOK privacy policy</h1>
+      <p class="lede">Last updated 3 November 2026</p>
+      <p>
+        CircleOK is a family check-in app made by Velori Labs Ltd ("we"), registered in England and
+        Wales, company number 17529890. This policy explains what we store, why, and how to get it
+        removed. We do not sell data, we do not show ads, and the app contains no analytics or
+        advertising SDKs.
+      </p>
+
+      <h2>Two kinds of users</h2>
+      <p>
+        <strong>Parents</strong> use the app without an account: a family member connects the
+        parent's phone with a one-time code. The phone keeps a random device token; we store only a
+        hash of it. <strong>Family members</strong> sign in with Apple, Google or an email link and
+        form a "circle" around a parent.
+      </p>
+
+      <h2>What we store</h2>
+      <table>
+        <tr>
+          <th>Data</th>
+          <th>Why</th>
+        </tr>
+        <tr>
+          <td>Family member name, email address, optional mobile number</td>
+          <td>
+            Sign-in, showing who did what in the circle, SMS alerts and the parent's "Call" buttons
+            (mobile number only if you add it)
+          </td>
+        </tr>
+        <tr>
+          <td>Parent's first name, check-in time and time zone</td>
+          <td>Running the daily check-in and reminders</td>
+        </tr>
+        <tr>
+          <td>
+            Check-ins, missed check-in alerts, "I need help" alerts, who acknowledged them and notes
+            you add
+          </td>
+          <td>The core service: telling the family the parent is OK, or that they are not</td>
+        </tr>
+        <tr>
+          <td>Medications, dose log, appointments, documents (photos, PDFs), notes and tasks</td>
+          <td>
+            Only if your circle uses the Family plan care tools. This is information your family
+            types or uploads. It may include health information; it is shared only with members of
+            your circle
+          </td>
+        </tr>
+        <tr>
+          <td>Push notification tokens, device platform</td>
+          <td>Delivering alerts and reminders</td>
+        </tr>
+        <tr>
+          <td>Subscription status</td>
+          <td>
+            Unlocking the Family plan (we receive status from Apple / Google via RevenueCat, never
+            card details)
+          </td>
+        </tr>
+        <tr>
+          <td>Server logs: request ids, timings, error codes</td>
+          <td>
+            Keeping the service working. Logs never contain names, phone numbers, health text or
+            tokens
+          </td>
+        </tr>
+      </table>
+
+      <h2>Where it is processed</h2>
+      <p>
+        Data is stored with Supabase (database, file storage, authentication) in London (AWS
+        eu-west-2). Push notifications pass through Expo's push service and Apple / Google. If your
+        circle has SMS alerts enabled, phone numbers and the alert text are sent through Twilio.
+        Subscriptions are managed by RevenueCat with Apple App Store or Google Play as the merchant.
+        Each of these companies processes data on our instructions under their standard terms.
+      </p>
+
+      <h2>Who can see what</h2>
+      <p>
+        Only members of a circle can see that circle's data; this is enforced in the database for
+        every request. The parent's phone can see its own status and the Call buttons the family set
+        up, nothing else. Velori Labs staff do not look at circle content except to investigate a
+        problem you have reported.
+      </p>
+
+      <h2>Retention and deletion</h2>
+      <p>
+        Data stays while your circle exists. A circle owner can disconnect a parent's phone at any
+        time. Any family member can delete their account in the app (Profile → Delete my account) or
+        by request at <a href="delete-account">velorilabs.co.uk/circleok/delete-account</a>.
+        Deleting the owner's account deletes the circle, its files and its alert history for
+        everyone in it. Backups are rotated within 30 days.
+      </p>
+
+      <h2>Not an emergency service</h2>
+      <p>
+        CircleOK sends notifications to family members. It does not contact emergency services and
+        delivery can be delayed by phones, networks or settings. In an emergency call 911 (US) or
+        999 / 112 (UK).
+      </p>
+
+      <h2>Children</h2>
+      <p>CircleOK is for adults. We do not knowingly collect data from anyone under 18.</p>
+
+      <h2>Your rights</h2>
+      <p>
+        Under UK GDPR and applicable US state laws you can ask for a copy of your data, correct it,
+        or have it deleted. Email <a href="mailto:hello@velorilabs.co.uk">hello@velorilabs.co.uk</a>
+        from the address you signed in with. UK users can also complain to the ICO (ico.org.uk).
+      </p>
+
+      <h2>Changes</h2>
+      <p>We will post updates here and, for material changes, in the app.</p>
+    </main>
+    <footer>
+      <p>
+        © 2026 Velori Labs Ltd · Registered in England and Wales · Company number 17529890 ·
+        <a href="mailto:hello@velorilabs.co.uk">hello@velorilabs.co.uk</a>
+      </p>
+    </footer>
+  </body>
+</html>
